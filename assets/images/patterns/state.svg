@@ -1,0 +1,16 @@
+<svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="State machine: Draft to Published to Archived">
+  <g font-family="ui-monospace, Menlo, monospace" font-size="8" fill="#3a3a40">
+    <circle cx="22"  cy="40" r="16" fill="#1f8fff" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="22" y="43" text-anchor="middle" fill="#fff">Draft</text>
+    <line x1="38" y1="40" x2="62" y2="40" stroke="#3a3a40" stroke-width="1.5"/>
+    <polygon points="60,37 66,40 60,43" fill="#3a3a40"/>
+    <text x="50" y="34" text-anchor="middle">publish</text>
+    <circle cx="80"  cy="40" r="16" fill="#28a745" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="80" y="43" text-anchor="middle" fill="#fff">Pub.</text>
+    <line x1="96" y1="40" x2="120" y2="40" stroke="#3a3a40" stroke-width="1.5"/>
+    <polygon points="118,37 124,40 118,43" fill="#3a3a40"/>
+    <text x="108" y="34" text-anchor="middle">archive</text>
+    <circle cx="138" cy="40" r="16" fill="#777" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="138" y="43" text-anchor="middle" fill="#fff">Arch.</text>
+  </g>
+</svg>

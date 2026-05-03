@@ -1,0 +1,26 @@
+<svg viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LLM agent loop with tool use">
+  <g font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#3a3a40">
+    <rect x="14" y="60" width="60" height="40" rx="4" fill="#fff" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="44" y="78" text-anchor="middle">user</text>
+    <text x="44" y="92" text-anchor="middle" font-size="9">prompt</text>
+    <line x1="74" y1="80" x2="100" y2="80" stroke="#3a3a40" stroke-width="1.5"/>
+    <polygon points="98,77 104,80 98,83" fill="#3a3a40"/>
+
+    <rect x="106" y="50" width="80" height="60" rx="4" fill="#c586c0" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="146" y="76" text-anchor="middle" fill="#fff">LLM</text>
+    <text x="146" y="92" text-anchor="middle" fill="#fff" font-size="9">decide:</text>
+    <text x="146" y="104" text-anchor="middle" fill="#fff" font-size="9">tool? answer?</text>
+
+    <line x1="186" y1="80" x2="216" y2="80" stroke="#3a3a40" stroke-width="1.5"/>
+    <polygon points="214,77 220,80 214,83" fill="#3a3a40"/>
+
+    <rect x="222" y="60" width="80" height="40" rx="4" fill="#fec03f" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="262" y="78" text-anchor="middle">tool()</text>
+    <text x="262" y="92" text-anchor="middle" font-size="9">your code</text>
+
+    <!-- Loop arrow back -->
+    <path d="M 262 100 Q 262 140 146 140 Q 146 130 146 110" fill="none" stroke="#3a3a40" stroke-width="1.5"/>
+    <polygon points="143,114 146,108 149,114" fill="#3a3a40"/>
+    <text x="200" y="155" text-anchor="middle" font-size="8">tool result → next turn</text>
+  </g>
+</svg>

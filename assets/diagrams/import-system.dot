@@ -1,0 +1,22 @@
+// What happens when you write `import foo`.
+digraph import_system {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#f6f6f6",
+        fontname="Menlo", fontsize=11];
+  edge [color="#888", fontname="Menlo", fontsize=9];
+
+  start [label="import foo", fillcolor="#ffe9c8", shape=note];
+  cache [label="sys.modules\n(import cache)"];
+  finders [label="Meta-path finders\n(walk sys.path,\nfind spec)"];
+  loaders [label="Loader\n(read & compile to bytecode)"];
+  exec [label="Execute top-level\nstatements in module's\nnamespace"];
+  bind [label="Bind name `foo`\nin caller's namespace"];
+
+  start -> cache;
+  cache -> bind [label="hit"];
+  cache -> finders [label="miss"];
+  finders -> loaders;
+  loaders -> exec;
+  exec -> bind;
+  exec -> cache [label="register", style=dashed];
+}

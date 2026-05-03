@@ -1,0 +1,33 @@
+<svg viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Web app pushing tasks through a queue to multiple workers">
+  <g font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#3a3a40">
+    <!-- Web -->
+    <rect x="6" y="60" width="60" height="40" rx="4" fill="#1ea366" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="36" y="78" text-anchor="middle" fill="#fff">web</text>
+    <text x="36" y="92" text-anchor="middle" fill="#fff" font-size="8">.delay()</text>
+    <!-- Arrow -->
+    <line x1="66" y1="80" x2="92" y2="80" stroke="#3a3a40" stroke-width="1.5"/>
+    <polygon points="90,77 96,80 90,83" fill="#3a3a40"/>
+    <!-- Queue (broker) -->
+    <rect x="98" y="50" width="100" height="60" rx="4" fill="#fec03f" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="148" y="68" text-anchor="middle" font-weight="bold">broker</text>
+    <text x="148" y="82" text-anchor="middle" font-size="9">(Redis)</text>
+    <!-- Tasks queued -->
+    <rect x="108" y="92" width="22" height="10" rx="2" fill="#fff" stroke="#3a3a40" stroke-width="1"/>
+    <rect x="134" y="92" width="22" height="10" rx="2" fill="#fff" stroke="#3a3a40" stroke-width="1"/>
+    <rect x="160" y="92" width="22" height="10" rx="2" fill="#fff" stroke="#3a3a40" stroke-width="1"/>
+    <!-- Workers fan-out -->
+    <line x1="198" y1="64" x2="234" y2="48" stroke="#3a3a40" stroke-width="1.5"/>
+    <polygon points="232,46 240,46 234,52" fill="#3a3a40"/>
+    <line x1="198" y1="80" x2="234" y2="80" stroke="#3a3a40" stroke-width="1.5"/>
+    <polygon points="232,77 240,80 232,83" fill="#3a3a40"/>
+    <line x1="198" y1="96" x2="234" y2="112" stroke="#3a3a40" stroke-width="1.5"/>
+    <polygon points="232,108 240,114 234,114" fill="#3a3a40"/>
+    <!-- Workers -->
+    <rect x="240" y="34" width="70" height="22" rx="4" fill="#1f8fff" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="275" y="49" text-anchor="middle" fill="#fff">worker 1</text>
+    <rect x="240" y="68" width="70" height="22" rx="4" fill="#1f8fff" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="275" y="83" text-anchor="middle" fill="#fff">worker 2</text>
+    <rect x="240" y="102" width="70" height="22" rx="4" fill="#1f8fff" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="275" y="117" text-anchor="middle" fill="#fff">worker 3</text>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Iterator walking through a sequence of items">
+  <g font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#3a3a40">
+    <!-- Items -->
+    <rect x="10"  y="32" width="24" height="24" rx="3" fill="#fff" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="22"  y="48" text-anchor="middle">a</text>
+    <rect x="40"  y="32" width="24" height="24" rx="3" fill="#fec03f" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="52"  y="48" text-anchor="middle">b</text>
+    <rect x="70"  y="32" width="24" height="24" rx="3" fill="#fff" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="82"  y="48" text-anchor="middle">c</text>
+    <rect x="100" y="32" width="24" height="24" rx="3" fill="#fff" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="112" y="48" text-anchor="middle">d</text>
+    <rect x="130" y="32" width="24" height="24" rx="3" fill="#fff" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="142" y="48" text-anchor="middle">e</text>
+    <!-- Cursor pointer -->
+    <polygon points="46,22 58,22 52,30" fill="#3a3a40"/>
+    <text x="52" y="18" text-anchor="middle" font-size="7">cursor</text>
+    <text x="80" y="74" text-anchor="middle" font-size="8">next() → next() → next() ...</text>
+  </g>
+</svg>

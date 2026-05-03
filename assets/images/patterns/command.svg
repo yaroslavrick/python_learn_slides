@@ -1,0 +1,16 @@
+<svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A request encapsulated as a command object">
+  <g font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#3a3a40">
+    <!-- Envelope -->
+    <rect x="20" y="22" width="60" height="36" rx="3" fill="#fec03f" stroke="#3a3a40" stroke-width="1.5"/>
+    <line x1="20" y1="22" x2="50" y2="42" stroke="#3a3a40" stroke-width="1.5"/>
+    <line x1="80" y1="22" x2="50" y2="42" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="50" y="55" text-anchor="middle" font-size="7">Transfer($100)</text>
+    <!-- Arrow .execute() -->
+    <line x1="84" y1="40" x2="106" y2="40" stroke="#3a3a40" stroke-width="1.5"/>
+    <polygon points="104,37 110,40 104,43" fill="#3a3a40"/>
+    <text x="95" y="34" text-anchor="middle" font-size="7">.execute()</text>
+    <!-- Receiver -->
+    <rect x="112" y="28" width="42" height="24" rx="3" fill="#fff" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="133" y="43" text-anchor="middle">bank</text>
+  </g>
+</svg>

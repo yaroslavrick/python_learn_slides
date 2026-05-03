@@ -1,0 +1,13 @@
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{ page.title | escape }} — {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+  <link rel="stylesheet" href="{{ '/vendor/reveal.js/dist/reset.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/vendor/reveal.js/dist/reveal.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/vendor/reveal.js/dist/theme/white.css' | relative_url }}" id="theme">
+  <link rel="stylesheet" href="{{ '/vendor/reveal.js/dist/plugin/highlight/monokai.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
+</head>

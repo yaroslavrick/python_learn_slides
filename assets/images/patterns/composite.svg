@@ -1,0 +1,25 @@
+<svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tree of folders and files">
+  <g font-family="ui-monospace, Menlo, monospace" font-size="8" fill="#3a3a40" stroke="#3a3a40">
+    <!-- Root -->
+    <rect x="68" y="4"  width="24" height="14" rx="2" fill="#fec03f" stroke-width="1.2"/>
+    <text x="80" y="14" text-anchor="middle" stroke="none">dir/</text>
+    <!-- Edges -->
+    <line x1="80" y1="18" x2="40" y2="34" stroke-width="1"/>
+    <line x1="80" y1="18" x2="80" y2="34" stroke-width="1"/>
+    <line x1="80" y1="18" x2="120" y2="34" stroke-width="1"/>
+    <!-- Mid level -->
+    <rect x="22" y="34" width="36" height="14" rx="2" fill="#fec03f" stroke-width="1.2"/>
+    <text x="40" y="44" text-anchor="middle" stroke="none">sub/</text>
+    <rect x="62" y="34" width="36" height="14" rx="2" fill="#fff" stroke-width="1.2"/>
+    <text x="80" y="44" text-anchor="middle" stroke="none">a.txt</text>
+    <rect x="102" y="34" width="36" height="14" rx="2" fill="#fff" stroke-width="1.2"/>
+    <text x="120" y="44" text-anchor="middle" stroke="none">b.txt</text>
+    <!-- Leaves under sub/ -->
+    <line x1="40" y1="48" x2="22" y2="62" stroke-width="1"/>
+    <line x1="40" y1="48" x2="58" y2="62" stroke-width="1"/>
+    <rect x="6"  y="62" width="32" height="14" rx="2" fill="#fff" stroke-width="1.2"/>
+    <text x="22" y="72" text-anchor="middle" stroke="none">x.txt</text>
+    <rect x="42" y="62" width="32" height="14" rx="2" fill="#fff" stroke-width="1.2"/>
+    <text x="58" y="72" text-anchor="middle" stroke="none">y.txt</text>
+  </g>
+</svg>

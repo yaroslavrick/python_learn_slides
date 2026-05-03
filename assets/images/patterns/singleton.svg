@@ -1,0 +1,27 @@
+<svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Multiple callers sharing a single instance">
+  <g font-family="ui-monospace, Menlo, monospace" font-size="8" fill="#3a3a40">
+    <!-- Single instance in middle -->
+    <circle cx="80" cy="40" r="18" fill="#fec03f" stroke="#3a3a40" stroke-width="2"/>
+    <text x="80" y="43" text-anchor="middle">config</text>
+    <!-- Callers -->
+    <rect x="5"  y="10" width="32" height="14" rx="2" fill="#fff" stroke="#3a3a40" stroke-width="1"/>
+    <text x="21" y="20" text-anchor="middle">caller A</text>
+    <line x1="37" y1="17" x2="63" y2="33" stroke="#3a3a40" stroke-width="1"/>
+    <polygon points="60,28 65,32 60,33" fill="#3a3a40"/>
+
+    <rect x="5"  y="56" width="32" height="14" rx="2" fill="#fff" stroke="#3a3a40" stroke-width="1"/>
+    <text x="21" y="66" text-anchor="middle">caller B</text>
+    <line x1="37" y1="63" x2="63" y2="47" stroke="#3a3a40" stroke-width="1"/>
+    <polygon points="60,48 65,47 60,52" fill="#3a3a40"/>
+
+    <rect x="123" y="10" width="32" height="14" rx="2" fill="#fff" stroke="#3a3a40" stroke-width="1"/>
+    <text x="139" y="20" text-anchor="middle">caller C</text>
+    <line x1="123" y1="17" x2="97" y2="33" stroke="#3a3a40" stroke-width="1"/>
+    <polygon points="100,28 95,32 100,33" fill="#3a3a40"/>
+
+    <rect x="123" y="56" width="32" height="14" rx="2" fill="#fff" stroke="#3a3a40" stroke-width="1"/>
+    <text x="139" y="66" text-anchor="middle">caller D</text>
+    <line x1="123" y1="63" x2="97" y2="47" stroke="#3a3a40" stroke-width="1"/>
+    <polygon points="100,48 95,47 100,52" fill="#3a3a40"/>
+  </g>
+</svg>

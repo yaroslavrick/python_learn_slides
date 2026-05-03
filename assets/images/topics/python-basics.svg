@@ -1,0 +1,16 @@
+<svg viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A REPL prompt with a friendly snake">
+  <rect x="20" y="20" width="280" height="120" rx="8" fill="#1f1f23"/>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="14">
+    <text x="40" y="55" fill="#dcdcaa">&gt;&gt;&gt;</text>
+    <text x="78" y="55" fill="#ce9178">"Hello, world!"</text>
+    <text x="40" y="83" fill="#aaa">'Hello, world!'</text>
+    <text x="40" y="115" fill="#dcdcaa">&gt;&gt;&gt;</text>
+  </g>
+  <!-- Blinking cursor -->
+  <rect x="78" y="103" width="2" height="14" fill="#ddd">
+    <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Tiny snake curl in the corner -->
+  <path d="M 250 100 Q 270 90 270 110 Q 270 125 255 125 Q 240 125 240 115" fill="none" stroke="#fec03f" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="250" cy="98" r="2" fill="#1f1f23"/>
+</svg>

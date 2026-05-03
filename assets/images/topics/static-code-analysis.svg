@@ -1,0 +1,20 @@
+<svg viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A magnifying glass examining code lines">
+  <!-- Code lines -->
+  <g stroke="#3a3a40" stroke-width="3" stroke-linecap="round">
+    <line x1="40" y1="40" x2="180" y2="40"/>
+    <line x1="40" y1="62" x2="200" y2="62"/>
+    <line x1="40" y1="84" x2="160" y2="84"/>
+    <line x1="40" y1="106" x2="190" y2="106"/>
+    <line x1="40" y1="128" x2="170" y2="128"/>
+  </g>
+  <!-- A flagged red squiggle -->
+  <path d="M 40 84 Q 50 78, 60 84 Q 70 90, 80 84 Q 90 78, 100 84 Q 110 90, 120 84" fill="none" stroke="#cd5555" stroke-width="2"/>
+  <!-- Magnifier -->
+  <g transform="translate(220 55)">
+    <circle cx="35" cy="35" r="34" fill="rgba(255,255,255,0.85)" stroke="#3a3a40" stroke-width="3"/>
+    <line x1="60" y1="60" x2="85" y2="85" stroke="#3a3a40" stroke-width="6" stroke-linecap="round"/>
+    <!-- Inside the lens: a tiny line being examined -->
+    <line x1="20" y1="35" x2="50" y2="35" stroke="#3a3a40" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 20 35 Q 25 31, 30 35 Q 35 39, 40 35 Q 45 31, 50 35" fill="none" stroke="#cd5555" stroke-width="1.5"/>
+  </g>
+</svg>

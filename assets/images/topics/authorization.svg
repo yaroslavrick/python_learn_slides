@@ -1,0 +1,18 @@
+<svg viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shield with permission checkmarks for can_read, can_edit, denied delete">
+  <g font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#3a3a40">
+    <!-- Shield -->
+    <path d="M 80 30 L 160 20 L 240 30 L 240 80 Q 240 130 160 145 Q 80 130 80 80 Z" fill="#1ea366" stroke="#3a3a40" stroke-width="2"/>
+    <!-- Permission checks -->
+    <circle cx="120" cy="65" r="9" fill="#fff"/>
+    <path d="M 115 65 L 119 69 L 126 60" fill="none" stroke="#1ea366" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="135" y="69" fill="#fff">view</text>
+
+    <circle cx="120" cy="92" r="9" fill="#fff"/>
+    <path d="M 115 92 L 119 96 L 126 87" fill="none" stroke="#1ea366" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="135" y="96" fill="#fff">edit</text>
+
+    <circle cx="120" cy="119" r="9" fill="#fff"/>
+    <path d="M 115 114 L 125 124 M 125 114 L 115 124" fill="none" stroke="#cd5555" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="135" y="123" fill="#fff">delete</text>
+  </g>
+</svg>

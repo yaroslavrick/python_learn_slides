@@ -1,0 +1,20 @@
+<svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skeleton method with overrideable steps">
+  <g font-family="ui-monospace, Menlo, monospace" font-size="8" fill="#3a3a40">
+    <rect x="6" y="14" width="148" height="52" rx="6" fill="#fff" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="14" y="12" font-size="9">run():</text>
+    <!-- Locked step -->
+    <rect x="16"  y="22" width="36" height="14" rx="2" fill="#3a3a40" stroke="#3a3a40" stroke-width="1"/>
+    <text x="34"  y="32" text-anchor="middle" fill="#fff">setup</text>
+    <!-- Hook 1 (overridable) -->
+    <rect x="56"  y="22" width="36" height="14" rx="2" fill="#fec03f" stroke="#3a3a40" stroke-width="1" stroke-dasharray="2 2"/>
+    <text x="74"  y="32" text-anchor="middle">fetch*</text>
+    <!-- Hook 2 (overridable) -->
+    <rect x="96"  y="22" width="36" height="14" rx="2" fill="#fec03f" stroke="#3a3a40" stroke-width="1" stroke-dasharray="2 2"/>
+    <text x="114" y="32" text-anchor="middle">clean*</text>
+    <!-- Locked teardown -->
+    <rect x="56"  y="44" width="56" height="14" rx="2" fill="#3a3a40" stroke="#3a3a40" stroke-width="1"/>
+    <text x="84"  y="54" text-anchor="middle" fill="#fff">teardown</text>
+    <!-- Legend -->
+    <text x="80" y="74" text-anchor="middle" font-size="7">* = subclass overrides</text>
+  </g>
+</svg>

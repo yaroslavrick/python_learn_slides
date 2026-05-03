@@ -1,0 +1,21 @@
+<svg viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Test results: three passing checkmarks and one failing X">
+  <g font-family="ui-monospace, Menlo, monospace" font-size="14" fill="#3a3a40">
+    <!-- Passes -->
+    <circle cx="60" cy="40" r="14" fill="#28a745"/>
+    <path d="M 53 40 L 58 45 L 67 35" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="85" y="46">test_add</text>
+
+    <circle cx="60" cy="75" r="14" fill="#28a745"/>
+    <path d="M 53 75 L 58 80 L 67 70" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="85" y="81">test_subtract</text>
+
+    <circle cx="60" cy="110" r="14" fill="#28a745"/>
+    <path d="M 53 110 L 58 115 L 67 105" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="85" y="116">test_multiply</text>
+
+    <!-- Fail -->
+    <circle cx="60" cy="145" r="14" fill="#cd5555"/>
+    <path d="M 53 138 L 67 152 M 67 138 L 53 152" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <text x="85" y="151">test_divide_by_zero</text>
+  </g>
+</svg>

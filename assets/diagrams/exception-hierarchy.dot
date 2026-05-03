@@ -1,0 +1,50 @@
+// Python 3.x built-in exception hierarchy (selected branches).
+digraph exceptions {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#f6f6f6",
+        fontname="Menlo", fontsize=11];
+  edge [color="#888", arrowsize=0.6];
+
+  BaseException [fillcolor="#ffe9c8"];
+  Exception [fillcolor="#ffe9c8"];
+
+  BaseException -> SystemExit;
+  BaseException -> KeyboardInterrupt;
+  BaseException -> GeneratorExit;
+  BaseException -> Exception;
+
+  Exception -> StopIteration;
+  Exception -> StopAsyncIteration;
+  Exception -> ArithmeticError;
+  Exception -> AttributeError;
+  Exception -> LookupError;
+  Exception -> NameError;
+  Exception -> OSError;
+  Exception -> TypeError;
+  Exception -> ValueError;
+  Exception -> RuntimeError;
+  Exception -> ImportError;
+
+  ArithmeticError -> ZeroDivisionError;
+  ArithmeticError -> OverflowError;
+
+  LookupError -> IndexError;
+  LookupError -> KeyError;
+
+  NameError -> UnboundLocalError;
+
+  OSError -> FileNotFoundError;
+  OSError -> PermissionError;
+  OSError -> TimeoutError;
+  OSError -> ConnectionError;
+
+  ConnectionError -> ConnectionResetError;
+  ConnectionError -> ConnectionRefusedError;
+
+  ValueError -> UnicodeError;
+
+  RuntimeError -> RecursionError;
+  RuntimeError -> NotImplementedError;
+
+  ImportError -> ModuleNotFoundError;
+}

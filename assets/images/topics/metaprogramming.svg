@@ -1,0 +1,13 @@
+<svg viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nested decorators wrapping a function">
+  <g font-family="ui-monospace, Menlo, monospace" font-size="13">
+    <!-- Outer @cache -->
+    <rect x="20" y="30" width="280" height="100" rx="10" fill="none" stroke="#c586c0" stroke-width="2" stroke-dasharray="5 3"/>
+    <text x="36" y="25" fill="#c586c0">@cache</text>
+    <!-- Middle @retry -->
+    <rect x="50" y="55" width="220" height="55" rx="8" fill="none" stroke="#dcdcaa" stroke-width="2" stroke-dasharray="5 3"/>
+    <text x="66" y="50" fill="#dcdcaa">@retry(times=3)</text>
+    <!-- Inner function -->
+    <rect x="80" y="78" width="160" height="22" rx="4" fill="#1f1f23"/>
+    <text x="160" y="94" text-anchor="middle" fill="#dcdcaa">def fetch(url): ...</text>
+  </g>
+</svg>

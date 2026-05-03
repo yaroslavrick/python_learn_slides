@@ -1,0 +1,10 @@
+<svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coffee wrapped in milk wrapped in sugar">
+  <g font-family="ui-monospace, Menlo, monospace" font-size="8" fill="#3a3a40">
+    <rect x="10"  y="14" width="140" height="52" rx="6" fill="none" stroke="#c586c0" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <text x="22" y="12" fill="#c586c0">+ sugar</text>
+    <rect x="32"  y="26" width="96"  height="32" rx="5" fill="none" stroke="#1f8fff" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <text x="44" y="24" fill="#1f8fff">+ milk</text>
+    <rect x="56" y="36" width="48"  height="14" rx="3" fill="#6f4f28" stroke="#3a3a40" stroke-width="1.2"/>
+    <text x="80" y="46" text-anchor="middle" fill="#fff">coffee</text>
+  </g>
+</svg>

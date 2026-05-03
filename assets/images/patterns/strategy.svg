@@ -1,0 +1,14 @@
+<svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Context with three swappable algorithms">
+  <g font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#3a3a40">
+    <rect x="6" y="30" width="50" height="22" rx="3" fill="#fff" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="31" y="44" text-anchor="middle">context</text>
+    <line x1="56" y1="41" x2="86" y2="41" stroke="#3a3a40" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <polygon points="84,38 90,41 84,44" fill="#3a3a40"/>
+    <rect x="92" y="10" width="60" height="16" rx="2" fill="#fec03f" stroke="#3a3a40" stroke-width="1.2"/>
+    <text x="122" y="21" text-anchor="middle">quicksort</text>
+    <rect x="92" y="32" width="60" height="16" rx="2" fill="#1f8fff" stroke="#3a3a40" stroke-width="1.2"/>
+    <text x="122" y="43" text-anchor="middle" fill="#fff">mergesort</text>
+    <rect x="92" y="54" width="60" height="16" rx="2" fill="#28a745" stroke="#3a3a40" stroke-width="1.2"/>
+    <text x="122" y="65" text-anchor="middle" fill="#fff">timsort</text>
+  </g>
+</svg>

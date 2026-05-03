@@ -1,0 +1,25 @@
+<svg viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Deploy pipeline: push to main → build → registry → server → health check">
+  <g font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#3a3a40">
+    <rect x="6"   y="60" width="56" height="40" rx="4" fill="#fff" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="34"  y="78" text-anchor="middle">push</text>
+    <text x="34"  y="92" text-anchor="middle" font-size="8">main</text>
+    <line x1="62" y1="80" x2="78" y2="80" stroke="#3a3a40" stroke-width="1.5"/>
+    <polygon points="76,77 82,80 76,83" fill="#3a3a40"/>
+
+    <rect x="82"  y="60" width="56" height="40" rx="4" fill="#1f8fff" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="110" y="78" text-anchor="middle" fill="#fff">CI</text>
+    <text x="110" y="92" text-anchor="middle" fill="#fff" font-size="8">build</text>
+    <line x1="138" y1="80" x2="154" y2="80" stroke="#3a3a40" stroke-width="1.5"/>
+    <polygon points="152,77 158,80 152,83" fill="#3a3a40"/>
+
+    <rect x="158" y="60" width="56" height="40" rx="4" fill="#fec03f" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="186" y="78" text-anchor="middle">registry</text>
+    <text x="186" y="92" text-anchor="middle" font-size="8">ghcr.io</text>
+    <line x1="214" y1="80" x2="230" y2="80" stroke="#3a3a40" stroke-width="1.5"/>
+    <polygon points="228,77 234,80 228,83" fill="#3a3a40"/>
+
+    <rect x="234" y="60" width="80" height="40" rx="4" fill="#28a745" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="274" y="78" text-anchor="middle" fill="#fff">deploy</text>
+    <text x="274" y="92" text-anchor="middle" fill="#fff" font-size="8">+ /health</text>
+  </g>
+</svg>

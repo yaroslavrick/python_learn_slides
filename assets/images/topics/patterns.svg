@@ -1,0 +1,22 @@
+<svg viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Repeating geometric blocks suggesting reusable design patterns">
+  <g stroke="#3a3a40" stroke-width="1.5">
+    <!-- Row 1 -->
+    <rect x="40"  y="30" width="36" height="36" rx="4" fill="#fec03f"/>
+    <rect x="84"  y="30" width="36" height="36" rx="4" fill="#1f8fff"/>
+    <rect x="128" y="30" width="36" height="36" rx="4" fill="#28a745"/>
+    <rect x="172" y="30" width="36" height="36" rx="4" fill="#fec03f"/>
+    <rect x="216" y="30" width="36" height="36" rx="4" fill="#1f8fff"/>
+    <!-- Row 2 -->
+    <rect x="40"  y="74" width="36" height="36" rx="4" fill="#1f8fff"/>
+    <rect x="84"  y="74" width="36" height="36" rx="4" fill="#28a745"/>
+    <rect x="128" y="74" width="36" height="36" rx="4" fill="#fec03f"/>
+    <rect x="172" y="74" width="36" height="36" rx="4" fill="#1f8fff"/>
+    <rect x="216" y="74" width="36" height="36" rx="4" fill="#28a745"/>
+    <!-- Row 3 -->
+    <rect x="40"  y="118" width="36" height="36" rx="4" fill="#28a745"/>
+    <rect x="84"  y="118" width="36" height="36" rx="4" fill="#fec03f"/>
+    <rect x="128" y="118" width="36" height="36" rx="4" fill="#1f8fff"/>
+    <rect x="172" y="118" width="36" height="36" rx="4" fill="#28a745"/>
+    <rect x="216" y="118" width="36" height="36" rx="4" fill="#fec03f"/>
+  </g>
+</svg>

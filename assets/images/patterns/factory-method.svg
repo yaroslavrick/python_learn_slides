@@ -1,0 +1,13 @@
+<svg viewBox="0 0 160 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Factory producing objects via a classmethod">
+  <g font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#3a3a40">
+    <!-- Hopper / factory -->
+    <polygon points="20,10 80,10 70,40 30,40" fill="#fec03f" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="50" y="28" text-anchor="middle">.margherita()</text>
+    <rect x="38" y="40" width="24" height="14" fill="#fec03f" stroke="#3a3a40" stroke-width="1.5"/>
+    <!-- Output -->
+    <line x1="62" y1="47" x2="100" y2="47" stroke="#3a3a40" stroke-width="1.5"/>
+    <polygon points="98,44 104,47 98,50" fill="#3a3a40"/>
+    <rect x="106" y="36" width="46" height="22" rx="3" fill="#fff" stroke="#3a3a40" stroke-width="1.5"/>
+    <text x="129" y="50" text-anchor="middle">Pizza()</text>
+  </g>
+</svg>
