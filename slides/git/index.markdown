@@ -6,7 +6,7 @@ permalink: /slides/git/
 
 # Git
 
-- [Git basics](/slides/git/basics.html)
+- [Git basics]({{ '/slides/git/basics.html' | relative_url }})
   <br><small>Repository, working tree, index. Daily commands.</small>
-- [Branching models](/slides/git/gitflow.html)
+- [Branching models]({{ '/slides/git/gitflow.html' | relative_url }})
   <br><small>Git Flow, GitHub Flow, trunk-based — when each pays off.</small>

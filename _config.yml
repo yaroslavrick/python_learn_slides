@@ -1,8 +1,8 @@
 title: Python Course
 description: Slide-deck-driven course covering Python, Django, FastAPI, testing, and more.
 
-baseurl: ""
-url: ""
+baseurl: "/python_learn_slides"
+url: "https://yaroslavrick.github.io"
 
 markdown: kramdown
 markdown_ext: "markdown,md"
