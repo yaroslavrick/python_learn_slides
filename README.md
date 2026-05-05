@@ -80,7 +80,7 @@ bundle install                # installs Jekyll + plugins from Gemfile.lock
 The `vendor/` directory is gitignored, so Reveal.js isn't in the repo. Clone it locally:
 
 ```bash
-git clone --depth 1 --branch 5.1.0 https://github.com/hakimel/reveal.js.git vendor/reveal.js
+git clone --depth 1 --branch 6.0.1 https://github.com/hakimel/reveal.js.git vendor/reveal.js
 rm -rf vendor/reveal.js/.git
 ```
 

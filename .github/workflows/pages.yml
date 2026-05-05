@@ -20,10 +20,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Reveal.js is gitignored; clone a known release into vendor/reveal.js
+      # Reveal.js is gitignored; clone a known release into vendor/reveal.js.
+      # MUST match the major version your local development uses — the plugin
+      # layout changed between 5.x and 6.x (and footer.html assumes 6.x paths).
       - name: Vendor Reveal.js
         run: |
-          git clone --depth 1 --branch 5.1.0 https://github.com/hakimel/reveal.js.git vendor/reveal.js
+          git clone --depth 1 --branch 6.0.1 https://github.com/hakimel/reveal.js.git vendor/reveal.js
           rm -rf vendor/reveal.js/.git vendor/reveal.js/.github vendor/reveal.js/test
 
       - uses: ruby/setup-ruby@v1
