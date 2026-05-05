@@ -94,7 +94,7 @@ Same business rules now testable without a `request`, and reusable from a CLI co
 
 ## When models get too fat — services
 
-If `Order.from_cart` does email, logging, payment, analytics — the model is **doing too much**. Extract a service.
+If `Order.from_cart` does email, logging, payment, analytics — the model is **doing too much**. Extract a service: a plain function that orchestrates models and side effects.
 
 ```python
 # orders/services.py
@@ -110,6 +110,16 @@ def create_order(user) -> CreateOrderResult:
         raise EmptyCart()
     if cart.total() > user.credit_limit:
         raise CreditLimitExceeded(cart.total())
+    # ...continued...
+```
+
+--
+
+## The service body
+
+```python
+def create_order(user) -> CreateOrderResult:
+    # ...validation as before...
 
     with transaction.atomic():
         order = Order.objects.create(user=user, total=cart.total())
@@ -122,7 +132,7 @@ def create_order(user) -> CreateOrderResult:
     return CreateOrderResult(order=order)
 ```
 
-Services are **plain functions** that orchestrate models and side effects.
+DB writes inside `transaction.atomic()`; side effects (email, audit) **after** the commit so a rollback doesn't fire them.
 
 --
 

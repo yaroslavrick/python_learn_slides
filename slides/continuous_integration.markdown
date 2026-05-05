@@ -154,7 +154,15 @@ jobs:
       - run: uv sync --frozen
       - run: uv run ruff check . && uv run ruff format --check .
       - run: uv run mypy src/
+```
 
+Lint takes seconds. Failing here means nobody waits on the test job.
+
+--
+
+## Gate tests behind lint
+
+```yaml
   test:
     runs-on: ubuntu-latest
     needs: lint                      # ← only run if lint passed

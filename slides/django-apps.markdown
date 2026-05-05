@@ -178,7 +178,11 @@ django-blog-app/
 └── tests/
 ```
 
-`pyproject.toml`:
+`src/` layout keeps your tests from accidentally importing the in-tree copy.
+
+--
+
+## `pyproject.toml`
 
 ```toml
 [project]
@@ -191,6 +195,8 @@ dependencies = ["django>=5.0"]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 ```
+
+`hatchling` is the modern default build backend. Replace it with `setuptools` if you have a reason; for new projects, hatchling is fine.
 
 --
 

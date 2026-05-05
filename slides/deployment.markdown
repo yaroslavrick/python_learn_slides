@@ -64,6 +64,15 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+```
+
+Checkout the repo, set up buildx, log into GitHub Container Registry. The next step does the actual build + push.
+
+--
+
+## Container deploy — build and push
+
+```yaml
       - uses: docker/build-push-action@v6
         with:
           push: true
@@ -72,7 +81,7 @@ jobs:
             ghcr.io/${{ github.repository }}:${{ github.sha }}
 ```
 
-Build + push on every commit to main. SHA-tagged for rollbacks; `latest` for "what's serving now".
+Two tags every commit: SHA-tagged for rollbacks, `latest` for "what's serving now".
 
 --
 

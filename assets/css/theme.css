@@ -109,25 +109,37 @@
   max-height: 60vh;
 }
 
-.reveal section img.title-illustration {
+.reveal section img.title-illustration,
+.reveal section .title-illustration img,
+.reveal section p.title-illustration img {
   max-height: 180px;
   width: auto;
   margin: 0 auto 0.4em;
   display: block;
 }
 
-.reveal section img.pattern-icon {
+.reveal section img.pattern-icon,
+.reveal section .pattern-icon img,
+.reveal section p.pattern-icon img {
   max-height: 75px;
   width: auto;
   margin: 0.1em auto 0.3em;
   display: block;
 }
 
-.reveal section img.pattern-illustration {
+.reveal section img.pattern-illustration,
+.reveal section .pattern-illustration img,
+.reveal section p.pattern-illustration img {
   max-height: 380px;
   width: auto;
   margin: 0.4em auto 0.6em;
   display: block;
+}
+
+.reveal section p.title-illustration,
+.reveal section p.pattern-icon,
+.reveal section p.pattern-illustration {
+  margin: 0;
 }
 
 /* Plain page layout (used by index). */

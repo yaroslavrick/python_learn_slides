@@ -61,7 +61,7 @@ docker run -d --name redis -p 6379:6379 redis:7
 
 ---
 
-## Configure
+## Configure — the Celery app
 
 ```python
 # mysite/celery.py
@@ -81,6 +81,12 @@ from .celery import app as celery_app
 __all__ = ("celery_app",)
 ```
 
+`autodiscover_tasks()` finds `tasks.py` modules in every installed app.
+
+--
+
+## Configure — Django settings
+
 ```python
 # settings.py
 CELERY_BROKER_URL = "redis://localhost:6379/0"
@@ -89,7 +95,7 @@ CELERY_TASK_SERIALIZER = "json"
 CELERY_TIMEZONE = "UTC"
 ```
 
-`autodiscover_tasks()` finds `tasks.py` modules in every installed app.
+The `CELERY_` prefix matches `namespace="CELERY"` in the previous slide — Celery picks up every prefixed setting from Django.
 
 ---
 

@@ -186,6 +186,12 @@ features/
 └── cart.feature
 ```
 
+`pytest-bdd` wins for most Django projects (you already have pytest); `behave` if you have a non-Python team that wants to read scenarios.
+
+--
+
+## `behave` step definitions
+
 ```python
 # features/steps/cart.py
 from behave import given, when, then
@@ -196,9 +202,7 @@ def step_impl(context, username):
     context.cart = Cart.objects.create(user=context.user)
 ```
 
-`context` is the shared scratchpad across steps.
-
-`pytest-bdd` wins for most Django projects (you already have pytest); `behave` if you have a non-Python team that wants to read scenarios.
+`context` is the shared scratchpad across steps — `behave`'s analog to `pytest-bdd`'s fixtures.
 
 ---
 

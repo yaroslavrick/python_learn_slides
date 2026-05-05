@@ -844,6 +844,10 @@ append_to(2)                # [2]   ← independent per call
 
 This rule applies to **any mutable default**: `list`, `dict`, `set`, custom objects.
 
+---
+
+## Type hints
+
 Optional but encouraged. Checked by tools (`mypy`, `pyright`), not by Python itself.
 
 ```python

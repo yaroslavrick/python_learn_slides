@@ -91,7 +91,19 @@ ansible web -m apt -a "name=nginx state=present" --become
         name: nginx
         state: started
         enabled: true
+```
 
+```bash
+ansible-playbook -i inventory.ini webserver.yml
+```
+
+--
+
+## Adding a config + handler
+
+```yaml
+  tasks:
+    # ...as before...
     - name: Copy our config
       copy:
         src: files/nginx.conf
@@ -105,9 +117,7 @@ ansible web -m apt -a "name=nginx state=present" --become
         state: reloaded
 ```
 
-```bash
-ansible-playbook -i inventory.ini webserver.yml
-```
+`notify` queues the handler; it runs once at the end if anything fired it.
 
 ---
 
@@ -149,7 +159,11 @@ domains:
   - www.example.com
 ```
 
-Jinja2 template:
+Variables in `group_vars/<group>.yml` apply to every host in that group.
+
+--
+
+## Jinja2 template
 
 ```jinja
 # templates/nginx.conf.j2
@@ -168,6 +182,8 @@ server {
     src: nginx.conf.j2
     dest: /etc/nginx/nginx.conf
 ```
+
+The `template` module renders Jinja2 with the playbook's variables in scope.
 
 ---
 

@@ -159,7 +159,7 @@ If the model decides to use the tool, `resp.content` contains a `tool_use` block
 
 ---
 
-## The agent loop
+## The agent loop — shape
 
 ```python
 def agent(user_message, tools, run_tool):
@@ -174,8 +174,19 @@ def agent(user_message, tools, run_tool):
         if resp.stop_reason == "end_turn":
             return resp.content[0].text
 
+        # ...handle tool calls, append results, loop...
+```
+
+Loop until the model says `end_turn`. That's an agent.
+
+--
+
+## Handling tool calls
+
+```python
         # Add the assistant's tool-use turn
         messages.append({"role": "assistant", "content": resp.content})
+
         # Run any tool_use blocks, append a tool_result turn
         results = [
             {
@@ -188,7 +199,7 @@ def agent(user_message, tools, run_tool):
         messages.append({"role": "user", "content": results})
 ```
 
-Loop until the model says it's done. That's an agent.
+The model emits `tool_use` blocks; you run them and feed the results back. The full transcript (assistant turn + your tool results) goes into the next call.
 
 ---
 
