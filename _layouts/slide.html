@@ -17,8 +17,16 @@
                  data-separator="^\r?\n---\r?\n$"
                  data-separator-vertical="^\r?\n--\r?\n$"
                  data-notes="^Note:">
+          {%- comment -%}
+            Slide content goes through Reveal's Markdown plugin client-side
+            (not Jekyll's renderer), so Liquid filters like `relative_url`
+            inside slide bodies aren't applied. Prefix `/assets/` paths here
+            so images pick up site.baseurl in production.
+          {%- endcomment -%}
+          {%- capture asset_link -%}]({{ site.baseurl }}/assets/{%- endcapture -%}
+          {%- assign content = page.content | replace: '](/assets/', asset_link -%}
           <script type="text/template">
-{{ page.content }}
+{{ content }}
           </script>
         </section>
       </div>
