@@ -7,3 +7,5 @@ vendor
 .env
 node_modules/
 vendor/
+.venv
+.claude/settings.local.json

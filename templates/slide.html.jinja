@@ -1,0 +1,117 @@
+{#-
+  Custom slide template. mkslides exposes:
+    favicon, theme, highlight_theme, revealjs_path,
+    markdown_data_options, markdown, revealjs_config, plugins
+  No `title` is exposed per-deck, so the page title is set client-side
+  from the first heading in the deck once Reveal.js is ready.
+-#}
+{%- set rel_root = revealjs_path | string | replace('mkslides-assets/reveal-js', '') -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Python Course</title>
+  <meta name="description" content="Slide-deck-driven course covering Python, Django, FastAPI, testing, and more.">
+
+  {% if favicon %}<link rel="icon" type="image/svg+xml" href="{{ favicon }}">{% endif %}
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Python Course">
+  <meta property="og:title" content="Python Course">
+  <meta property="og:description" content="Slide-deck-driven course covering Python, Django, FastAPI, testing, and more.">
+  <meta property="og:image" content="https://yaroslavrick.github.io/python_learn_slides/assets/images/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Python Course">
+  <meta name="twitter:description" content="Slide-deck-driven course covering Python, Django, FastAPI, testing, and more.">
+  <meta name="twitter:image" content="https://yaroslavrick.github.io/python_learn_slides/assets/images/og-card.png">
+
+  <link rel="stylesheet" href="{{ revealjs_path }}/dist/reset.css">
+  <link rel="stylesheet" href="{{ revealjs_path }}/dist/reveal.css">
+  {% if theme %}<link rel="stylesheet" href="{{ theme }}" id="theme">{% endif %}
+  {% if highlight_theme %}<link rel="stylesheet" href="{{ highlight_theme }}">{% endif %}
+  <link rel="stylesheet" href="{{ rel_root }}_static/theme.css">
+
+  {% for plugin in plugins %}{% for css in (plugin.extra_css or []) %}<link rel="stylesheet" href="{{ css }}">
+  {% endfor %}{% endfor %}
+</head>
+<body>
+  <a class="home-link" href="{{ rel_root }}index.html" aria-label="Back to course index">
+    <svg class="home-icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+      <rect x="1" y="1" width="5" height="5" rx="0.6" fill="currentColor"/>
+      <rect x="8" y="1" width="5" height="5" rx="0.6" fill="currentColor"/>
+      <rect x="1" y="8" width="5" height="5" rx="0.6" fill="currentColor"/>
+      <rect x="8" y="8" width="5" height="5" rx="0.6" fill="currentColor"/>
+    </svg>
+    <span>Index</span>
+  </a>
+
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown
+      {% for key, value in markdown_data_options.items() %}
+        {{ key }}="{{ value }}"
+      {% endfor %}
+      >
+<textarea data-template>
+{{ markdown | replace('](/assets/', '](' ~ rel_root ~ 'assets/') | safe }}
+</textarea>
+      </section>
+    </div>
+  </div>
+
+  <script src="{{ revealjs_path }}/dist/reveal.js"></script>
+  <script src="{{ revealjs_path }}/dist/plugin/markdown.js"></script>
+  <script src="{{ revealjs_path }}/dist/plugin/highlight.js"></script>
+  <script src="{{ revealjs_path }}/dist/plugin/notes.js"></script>
+
+  {% for plugin in plugins %}{% for js in (plugin.extra_javascript or []) %}<script src="{{ js }}"></script>
+  {% endfor %}{% endfor %}
+
+  <script>
+    Reveal.initialize({
+      {% if revealjs_config %}{% for key, value in revealjs_config.items() %}{{ key }}: {{ value | tojson | safe }},
+      {% endfor %}{% endif %}
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+    });
+
+    Reveal.on('ready', function () {
+      var firstHeading = document.querySelector('.reveal .slides h1, .reveal .slides h2');
+      if (firstHeading) {
+        document.title = firstHeading.textContent.trim() + ' — Python Course';
+      }
+      addCopyButtons();
+    });
+
+    function addCopyButtons() {
+      document.querySelectorAll('.reveal pre').forEach(function (pre) {
+        if (pre.querySelector('.copy-btn')) return;
+        var btn = document.createElement('button');
+        btn.className = 'copy-btn';
+        btn.type = 'button';
+        btn.setAttribute('aria-label', 'Copy code');
+        btn.textContent = 'Copy';
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var code = pre.querySelector('code');
+          var text = code ? code.textContent : pre.textContent;
+          navigator.clipboard.writeText(text).then(function () {
+            btn.textContent = 'Copied';
+            btn.classList.add('copied');
+            setTimeout(function () {
+              btn.textContent = 'Copy';
+              btn.classList.remove('copied');
+            }, 1500);
+          }, function () {
+            btn.textContent = 'Failed';
+          });
+        });
+        pre.appendChild(btn);
+      });
+    }
+  </script>
+</body>
+</html>
