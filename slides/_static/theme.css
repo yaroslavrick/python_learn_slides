@@ -94,6 +94,15 @@
   font-style: italic;
 }
 
+.reveal table {
+  font-size: 0.6em;
+}
+
+.reveal table th,
+.reveal table td {
+  padding: 0.25em 0.6em;
+}
+
 .reveal section img {
   border: none;
   background: none;
