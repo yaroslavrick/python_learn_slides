@@ -32,8 +32,6 @@ brew install uv
 
 `uv` reads `.python-version` and downloads matching Python on first sync.
 
-> Already on `mise`? `mise install` also reads `.python-version` and will pull the same Python for you.
-
 </details>
 
 ### 2. Install dependencies
