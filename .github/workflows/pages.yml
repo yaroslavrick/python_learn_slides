@@ -31,9 +31,6 @@ jobs:
       - name: Build site
         run: uv run mkslides build slides/ -d _site/
 
-      - name: Copy image assets into output
-        run: cp -r assets _site/assets
-
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site

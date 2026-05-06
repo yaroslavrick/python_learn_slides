@@ -54,10 +54,7 @@ To produce a static build instead:
 
 ```bash
 uv run mkslides build slides/ -d _site/
-cp -r assets _site/assets
 ```
-
-The `cp` step copies images and SVGs into the output (mkslides only copies files inside its input directory; image assets live at the project root and are pulled in via the same step CI runs).
 
 ## Authoring slides
 
@@ -91,8 +88,7 @@ Pushes to `main` trigger `.github/workflows/pages.yml`, which:
 
 1. Sets up `uv` and installs Python + dependencies from `uv.lock`
 2. Runs `uv run mkslides build slides/ -d _site/`
-3. Copies image assets into `_site/`
-4. Uploads `_site/` and deploys to GitHub Pages
+3. Uploads `_site/` and deploys to GitHub Pages
 
 Roughly a minute from `git push` to live.
 
