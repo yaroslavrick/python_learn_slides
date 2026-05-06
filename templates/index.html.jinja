@@ -1,0 +1,103 @@
+{#-
+  Custom index template. mkslides exposes:
+    favicon, title, theme, navtree, build_datetime, enable_footer
+  Curriculum structure (groupings + descriptions) is hand-curated below
+  rather than derived from filenames.
+-#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <meta name="description" content="Slide-deck-driven course covering Python, Django, FastAPI, testing, and more.">
+
+  {% if favicon %}<link rel="icon" type="image/svg+xml" href="{{ favicon }}">{% endif %}
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ title }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="Slide-deck-driven course covering Python, Django, FastAPI, testing, and more.">
+  <meta property="og:image" content="https://yaroslavrick.github.io/python_learn_slides/assets/images/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="Slide-deck-driven course covering Python, Django, FastAPI, testing, and more.">
+  <meta name="twitter:image" content="https://yaroslavrick.github.io/python_learn_slides/assets/images/og-card.png">
+
+  <link rel="stylesheet" href="_static/theme.css">
+</head>
+<body class="page">
+
+<div class="hero">
+  <img src="assets/images/hero.svg" alt="Stylized code window with a Python snippet">
+</div>
+
+<h1>Python Course</h1>
+
+<p>A slide-deck-driven course covering Python, web development with Django and FastAPI, testing, tooling, and a few extras.</p>
+
+<h2>Python language</h2>
+<ul>
+  <li><a href="introduction.html">Introduction</a><br><small>What we'll cover, why Python, course structure.</small></li>
+  <li><a href="python-basics.html">Python basics</a><br><small>Types, control flow, functions, comprehensions, exceptions.</small></li>
+  <li><a href="oop.html">Object-oriented programming</a><br><small>Classes, inheritance, dunders, dataclasses, ABCs, Protocols.</small></li>
+  <li><a href="metaprogramming.html">Metaprogramming</a><br><small>Decorators, descriptors, metaclasses, <code>__init_subclass__</code>.</small></li>
+  <li><a href="refactoring-python.html">Refactoring Python</a><br><small>Code smells, SOLID, idiomatic improvements.</small></li>
+  <li><a href="patterns.html">Design patterns</a><br><small>Why half of them disappear in Python.</small></li>
+</ul>
+
+<h2>Tooling &amp; testing</h2>
+<ul>
+  <li><a href="python-tooling.html">Project setup with uv</a><br><small>Install Python, scaffold projects, manage deps and tools — <code>uv</code>, the modern default.</small></li>
+  <li><a href="python-packages.html">Python packages — under the hood</a><br><small>What <code>uv</code> abstracts: <code>pip</code>, <code>venv</code>, <code>pyproject.toml</code>, publishing to PyPI.</small></li>
+  <li><a href="task-runners.html">Task runners</a><br><small>Make, <code>invoke</code>, <code>click</code>, <code>typer</code> for project commands.</small></li>
+  <li><a href="pytest.html">PyTest</a><br><small>Fixtures, parametrize, marks, mocking, plugins.</small></li>
+  <li><a href="static-code-analysis.html">Static code analysis</a><br><small><code>ruff</code>, <code>mypy</code>, <code>pre-commit</code>.</small></li>
+  <li><a href="continuous_integration.html">Continuous integration</a><br><small>Running tests, lint, and type-check on every push.</small></li>
+</ul>
+
+<h2>Web — Django</h2>
+<ul>
+  <li><a href="django.html">Django</a><br><small>Project structure, settings, manage.py, the request/response cycle.</small></li>
+  <li><a href="django-models.html">Django models</a><br><small>ORM, migrations, QuerySets, relationships, performance.</small></li>
+  <li><a href="django-urls.html">Django URLs</a><br><small>Routing, named routes, includes, reverse lookup.</small></li>
+  <li><a href="django-views.html">Django views</a><br><small>Function-based, class-based, generic views, mixins.</small></li>
+  <li><a href="django-templates.html">Django templates</a><br><small>DTL, blocks, filters, forms, ModelForms.</small></li>
+  <li><a href="django-auth.html">Django auth</a><br><small>Users, sessions, login, password hashing, allauth.</small></li>
+  <li><a href="authorization.html">Authorization</a><br><small>Permissions, groups, object-level access, custom permission classes.</small></li>
+  <li><a href="django-apps.html">Django apps</a><br><small>Reusable apps, signals, management commands, packaging.</small></li>
+  <li><a href="refactoring-django.html">Refactoring Django</a><br><small>Fat models, thin views, services, custom QuerySets.</small></li>
+  <li><a href="bdd.html">BDD</a><br><small><code>pytest-bdd</code> and <code>behave</code> against a Django app.</small></li>
+  <li><a href="celery.html">Celery</a><br><small>Background jobs, retries, periodic tasks, Beat.</small></li>
+  <li><a href="django-rest-framework.html">Django REST Framework</a><br><small>Serializers, viewsets, routers, auth, throttling, JWT.</small></li>
+  <li><a href="graphql.html">GraphQL</a><br><small>Strawberry, Graphene-Django, queries, mutations, subscriptions.</small></li>
+</ul>
+
+<h2>Web — FastAPI &amp; async</h2>
+<ul>
+  <li><a href="fastapi.html">FastAPI</a><br><small>Type-hint-driven async APIs, Pydantic, dependency injection, OpenAPI.</small></li>
+  <li><a href="wsgi-asgi.html">WSGI &amp; ASGI</a><br><small>The protocols Python servers and frameworks speak. gunicorn vs uvicorn.</small></li>
+  <li><a href="async-concurrency.html">Async &amp; concurrency</a><br><small>asyncio, threads, processes — when each pays off, when each doesn't.</small></li>
+</ul>
+
+<h2>Infrastructure</h2>
+<ul>
+  <li><a href="git/basics.html">Git basics</a><br><small>Working tree, index, branches, remotes, daily commands.</small></li>
+  <li><a href="git/gitflow.html">Branching models</a><br><small>Git Flow, GitHub Flow, trunk-based — when each pays off.</small></li>
+  <li><a href="docker/docker.html">Docker</a><br><small>Dockerfile, layered caching, multi-stage builds, <code>docker compose</code>.</small></li>
+  <li><a href="ansible.html">Ansible</a><br><small>Agentless YAML playbooks for server configuration.</small></li>
+  <li><a href="deployment.html">Deployment</a><br><small>CI → registry → server, with migrations, rollbacks, env vars.</small></li>
+</ul>
+
+<h2>Data &amp; AI extras</h2>
+<ul>
+  <li><a href="data-ai/numpy-pandas.html">NumPy &amp; pandas</a><br><small>Arrays, DataFrames, group-by, joining, time series.</small></li>
+  <li><a href="data-ai/scikit-learn.html">scikit-learn</a><br><small>fit/predict, pipelines, cross-validation, model selection.</small></li>
+  <li><a href="llm-agents.html">LLM agents</a><br><small>Anthropic / OpenAI APIs, tool use, the agent loop, RAG.</small></li>
+</ul>
+
+</body>
+</html>

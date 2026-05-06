@@ -1,0 +1,33 @@
+# mkslides config — see https://github.com/MartenBE/mkslides
+# Builds slides from `slides/` to `_site/`. Asset images live at `assets/`
+# (project root) and are copied into `_site/` separately by the build pipeline,
+# since mkslides only copies files inside its input directory.
+
+index:
+  title: Python Course
+  template: templates/index.html.jinja
+  favicon: assets/images/favicon.svg
+  enable_footer: false
+
+slides:
+  template: templates/slide.html.jinja
+  theme: white
+  highlight_theme: monokai
+  favicon: assets/images/favicon.svg
+  # Match the separators we used under Jekyll: blank line + `---` / `--`,
+  # speaker notes prefixed with `Note:`.
+  separator: '^\r?\n---\r?\n$'
+  separator_vertical: '^\r?\n--\r?\n$'
+  separator_notes: '^Note:'
+
+revealjs:
+  hash: true
+  history: true
+  slideNumber: 'c/t'
+  transition: slide
+  transitionSpeed: fast
+  width: 1280
+  height: 800
+  margin: 0.04
+  minScale: 0.2
+  maxScale: 1.5

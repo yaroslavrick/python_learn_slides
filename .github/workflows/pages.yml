@@ -20,25 +20,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Reveal.js is gitignored; clone a known release into vendor/reveal.js.
-      # MUST match the major version your local development uses — the plugin
-      # layout changed between 5.x and 6.x (and footer.html assumes 6.x paths).
-      - name: Vendor Reveal.js
-        run: |
-          git clone --depth 1 --branch 6.0.1 https://github.com/hakimel/reveal.js.git vendor/reveal.js
-          rm -rf vendor/reveal.js/.git vendor/reveal.js/.github vendor/reveal.js/test
-
-      - uses: ruby/setup-ruby@v1
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v3
         with:
-          ruby-version: '3.4'
-          bundler-cache: true
+          enable-cache: true
 
-      - uses: actions/configure-pages@v5
+      - name: Install Python and dependencies
+        run: uv sync --frozen
 
       - name: Build site
-        run: bundle exec jekyll build
-        env:
-          JEKYLL_ENV: production
+        run: uv run mkslides build slides/ -d _site/
+
+      - name: Copy image assets into output
+        run: cp -r assets _site/assets
 
       - uses: actions/upload-pages-artifact@v3
         with:
