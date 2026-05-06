@@ -105,19 +105,24 @@ Reduces time-to-first-token from seconds to milliseconds — critical for chat U
 
 ---
 
-## Structured output
+## Structured output — Pydantic schema
 
 Don't parse free-text. Ask for JSON, validate with Pydantic:
 
 ```python
 from pydantic import BaseModel
-import json
 
 class Booking(BaseModel):
     destination: str
     nights: int
     budget_usd: int
+```
 
+---
+
+## Structured output — call the model
+
+```python
 resp = client.messages.create(
     model="claude-sonnet-4-6",
     max_tokens=512,

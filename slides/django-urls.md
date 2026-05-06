@@ -92,7 +92,7 @@ urlpatterns = [
 
 ---
 
-## Splitting URLs by app
+## Splitting URLs — per-app file
 
 A growing site keeps each app's URLs in its own file:
 
@@ -108,6 +108,10 @@ urlpatterns = [
     path("<int:id>/",      views.detail,      name="detail"),
 ]
 ```
+
+---
+
+## Splitting URLs — including from the project
 
 ```python
 # mysite/urls.py
