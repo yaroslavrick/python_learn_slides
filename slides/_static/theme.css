@@ -104,6 +104,15 @@
   padding: 0.25em 0.6em;
 }
 
+/* Tighten Reveal's default vertical rhythm so dense slides fit the canvas.
+   Reveal's white theme is generous with margins (~20px/h2, 1em/p) — we shave
+   a chunk off so dense decks (bullets + code + prose) don't push past 800px. */
+.reveal h2 { margin: 0 0 0.2em; }
+.reveal h3 { margin: 0 0 0.2em; }
+.reveal p { margin: 0.3em 0; }
+.reveal ul, .reveal ol { margin: 0.3em 0; }
+.reveal li { line-height: 1.25; margin: 0; }
+
 .reveal section img {
   border: none;
   background: none;
