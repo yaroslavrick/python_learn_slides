@@ -94,14 +94,6 @@
   font-style: italic;
 }
 
-.reveal .filename {
-  display: block;
-  font-size: 0.75em;
-  color: #888;
-  margin-bottom: 0.2em;
-  font-family: ui-monospace, "Menlo", monospace;
-}
-
 .reveal section img {
   border: none;
   background: none;
@@ -118,15 +110,6 @@
   display: block;
 }
 
-.reveal section img.pattern-icon,
-.reveal section .pattern-icon img,
-.reveal section p.pattern-icon img {
-  max-height: 75px;
-  width: auto;
-  margin: 0.1em auto 0.3em;
-  display: block;
-}
-
 .reveal section img.pattern-illustration,
 .reveal section .pattern-illustration img,
 .reveal section p.pattern-illustration img {
@@ -137,7 +120,6 @@
 }
 
 .reveal section p.title-illustration,
-.reveal section p.pattern-icon,
 .reveal section p.pattern-illustration {
   margin: 0;
 }
