@@ -530,7 +530,8 @@ class Status(Enum):
 Status.ACTIVE               # <Status.ACTIVE: 2>
 Status.ACTIVE.name          # 'ACTIVE'
 Status.ACTIVE.value         # 2
-list(Status)                # [<Status.PENDING: 1>, <Status.ACTIVE: 2>, <Status.CLOSED: 3>]
+list(Status)
+# → [<Status.PENDING: 1>, <Status.ACTIVE: 2>, <Status.CLOSED: 3>]
 ```
 
 --

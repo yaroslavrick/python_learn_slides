@@ -121,8 +121,14 @@ class Booking(BaseModel):
 resp = client.messages.create(
     model="claude-sonnet-4-6",
     max_tokens=512,
-    system='Respond ONLY as JSON matching: {"destination":..., "nights":..., "budget_usd":...}',
-    messages=[{"role": "user", "content": "I want a 5-night trip to Lisbon, $2000."}],
+    system=(
+        "Respond ONLY as JSON matching: "
+        '{"destination":..., "nights":..., "budget_usd":...}'
+    ),
+    messages=[{
+        "role": "user",
+        "content": "I want a 5-night trip to Lisbon, $2000.",
+    }],
 )
 booking = Booking.model_validate_json(resp.content[0].text)
 booking.destination          # 'Lisbon'
