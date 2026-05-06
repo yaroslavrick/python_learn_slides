@@ -162,7 +162,7 @@ Same service is callable from:
 
 ---
 
-## Custom QuerySets — reusable filters
+## Custom QuerySets — defining one
 
 Move `Post.objects.filter(published=True, ...)` into the model.
 
@@ -183,7 +183,9 @@ class Post(models.Model):
     objects = PostQuerySet.as_manager()
 ```
 
-Now:
+---
+
+## Custom QuerySets — using them
 
 ```python
 Post.objects.published()                          # all published

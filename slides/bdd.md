@@ -85,7 +85,7 @@ Gherkin keywords: `Given`, `When`, `Then`, `And`, `But`, `Background`, `Scenario
 
 ---
 
-## Step definitions
+## Step definitions — given
 
 ```python
 # tests/step_defs/test_cart_steps.py
@@ -100,7 +100,15 @@ scenarios("../features/cart.feature")
 def empty_cart(db, username):
     user = User.objects.create_user(username=username)
     return Cart.objects.create(user=user)
+```
 
+`scenarios("...")` discovers every scenario in the feature file and turns each into a pytest test.
+
+---
+
+## Step definitions — when, then
+
+```python
 @when(parsers.parse('{username} adds "{title}" priced {price:f} to her cart'))
 def add_item(cart, username, title, price):
     book = Book.objects.create(title=title, price=Decimal(str(price)))
@@ -112,7 +120,7 @@ def cart_count(cart, n):
     assert cart.items.count() == n
 ```
 
-`scenarios("...")` is the magic line — it discovers every scenario in the feature file and turns each into a pytest test.
+Each `@given` / `@when` / `@then` matches a Gherkin line via `parsers.parse`. Type hints in the parse string (`{n:d}`, `{price:f}`) drive coercion.
 
 ---
 

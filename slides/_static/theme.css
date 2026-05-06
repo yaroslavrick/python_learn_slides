@@ -37,14 +37,15 @@
 
 .reveal pre {
   box-shadow: none;
-  font-size: 0.55em;
-  line-height: 1.35;
+  font-size: 0.5em;
+  line-height: 1.25;
   width: 100%;
   position: relative;
+  margin: 0.4em 0;
 }
 
 .reveal pre code {
-  padding: 1em 1.2em;
+  padding: 0.6em 1em;
   max-height: none;
   border-radius: 4px;
 }
@@ -94,13 +95,23 @@
   font-style: italic;
 }
 
-.reveal .filename {
-  display: block;
-  font-size: 0.75em;
-  color: #888;
-  margin-bottom: 0.2em;
-  font-family: ui-monospace, "Menlo", monospace;
+.reveal table {
+  font-size: 0.6em;
 }
+
+.reveal table th,
+.reveal table td {
+  padding: 0.25em 0.6em;
+}
+
+/* Tighten Reveal's default vertical rhythm so dense slides fit the canvas.
+   Reveal's white theme is generous with margins (~20px/h2, 1em/p) — we shave
+   a chunk off so dense decks (bullets + code + prose) don't push past 800px. */
+.reveal h2 { margin: 0 0 0.2em; }
+.reveal h3 { margin: 0 0 0.2em; }
+.reveal p { margin: 0.3em 0; }
+.reveal ul, .reveal ol { margin: 0.3em 0; }
+.reveal li { line-height: 1.25; margin: 0; }
 
 .reveal section img {
   border: none;
@@ -118,15 +129,6 @@
   display: block;
 }
 
-.reveal section img.pattern-icon,
-.reveal section .pattern-icon img,
-.reveal section p.pattern-icon img {
-  max-height: 75px;
-  width: auto;
-  margin: 0.1em auto 0.3em;
-  display: block;
-}
-
 .reveal section img.pattern-illustration,
 .reveal section .pattern-illustration img,
 .reveal section p.pattern-illustration img {
@@ -137,7 +139,6 @@
 }
 
 .reveal section p.title-illustration,
-.reveal section p.pattern-icon,
 .reveal section p.pattern-illustration {
   margin: 0;
 }

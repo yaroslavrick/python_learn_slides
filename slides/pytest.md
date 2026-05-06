@@ -84,7 +84,11 @@ my-package/
     └── helpers.py              # ✗ not collected
 ```
 
-Configure differently in `pyproject.toml`:
+---
+
+## Test discovery — configuring
+
+Override the defaults in `pyproject.toml`:
 
 ```toml
 [tool.pytest.ini_options]

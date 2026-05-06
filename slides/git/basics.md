@@ -190,16 +190,11 @@ __pycache__/
 .env
 .pytest_cache/
 .mypy_cache/
-.ruff_cache/
 
-# Editor
+# Editor / OS
 .vscode/
 .idea/
-*.swp
-
-# OS
 .DS_Store
-Thumbs.db
 
 # Build
 dist/

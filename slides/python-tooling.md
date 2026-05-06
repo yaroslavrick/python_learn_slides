@@ -71,10 +71,10 @@ uv add requests
 
 Four steps, atomically:
 
-1. **Resolves** a compatible version against your `requires-python` and existing deps
+1. **Resolves** a compatible version against `requires-python` and existing deps
 2. **Adds** the dep under `[project.dependencies]` in `pyproject.toml`
 3. **Updates** `uv.lock` (with hashes for every transitive dep)
-4. **Installs** into `.venv/` — a **virtual environment**: an isolated folder holding the project's Python interpreter and its installed packages, so projects don't share or fight over versions
+4. **Installs** into `.venv/` (an isolated per-project Python + packages folder)
 
 If any step fails, nothing changes. Same machine, same `uv.lock` → byte-identical environment.
 
